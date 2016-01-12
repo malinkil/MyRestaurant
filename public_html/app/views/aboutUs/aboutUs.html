@@ -1,0 +1,42 @@
+
+    <div ng-controller="slidCntrl as s">
+
+        <div class="slideshow">
+            <img ng-repeat="slide in slides" class="slide" ng-show="isCurrentSlideIndex($index)" ng-src="{{slide.image}}">
+        </div>
+
+        <div class="button">
+            <input class="btn btn-default" id="prev" type="button" value="Previous" ng-click="nextSlide()"/>
+            <input class="btn btn-default" id="next"  type="button" value="Next" ng-click="prevSlide()"/>
+        </div>
+
+        <nav class="nav1">
+        <div>
+            <ol class="dots">
+                <li class="dot" ng-repeat="slide in slides">
+                   <a href="#/aboutUs" ng-class="{'active':isCurrentSlideIndex($index)}"
+                       ng-click="setCurrentSlideIndex($index);">{{slides.description}}
+                   </a>
+                </li>
+            </ol>
+        </div>
+        </nav>
+    </div>
+    <br>
+    <div class="sectn">
+        <article>
+            <section>
+                An excellent exploration of India's culture through its cuisine can be had at "The Eatery".
+
+                    The Eatery Restaurant & Catering Chicago. Inside, the air is regal, with the rich aromas of cumin, curry, cinnamon and sizzling onions waft through out "The Eatery".
+
+                    Step through the curtains of exotica into dishes like jheenga madras or one of our specialities cooked in the kadhai (iron work) kadhai gosht. "The Eatery"s main course a house favorite will typically includes Reshami kabab to start with, Murg tikka masala, sizzling tandoori roasted chicken in a rich tomato-kissed sauce: Rogan Josh, lean long cooked lamb in a sauce spiked with cardamom. The Safron fragrant basmati rice and traditinal tandoori naan are welcoming accompaniments to all your Culinary Nirvana.
+</section>
+            <br>
+            
+            
+        </article>
+    </div>
+
+
+

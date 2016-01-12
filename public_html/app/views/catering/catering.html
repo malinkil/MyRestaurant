@@ -1,0 +1,36 @@
+<h3>Search:</h3> <p> <input type="text" ng-model="catrerfilter"/></p>
+<div  ng-controller="catDetails as c">
+<div class="empSub" ng-show="c.catSelected">
+    <h3>Catrer Information</h3>
+    <p><b>Catrer Id : {{ c.catSelected.catrerId }}</b></p>
+    <p><b>Catrer Name : {{ c.catSelected.catrerName }}</b></p>
+    <p><b>Catrer City : {{ c.catSelected.catrerCity }}</b></p>
+    
+    
+</div>
+<div class="empSub" ng-hide="c.catSelected">
+    <p>Click on Catrer details for more information</p>
+</div>
+    <br><br>
+<div class="empTable">
+    <table border="1" class="table">
+    <thead>
+        <tr>
+            <th><b>Catrer Name</b></th>
+            <td><b>Catrer City</b></td>
+        </tr> 
+    </thead>
+    <tbody>
+        <tr ng-repeat="cat in allcatrers |filter:catrerfilter"
+            ng-click="c.catSelected = cat"
+            ng-class="{true:'active',false:''}[c.catSelected == cat]">
+            <td><b>{{ cat.catrerName }}</b></td>
+            <td><b>{{ cat.catrerCity }}</b></td>
+        </tr>
+    </tbody>
+    </table>
+     <br><br> 
+</div>
+</div>
+
+   

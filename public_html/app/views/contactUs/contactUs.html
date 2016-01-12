@@ -1,0 +1,90 @@
+<div class="cu">
+<article>
+    <section>
+        <p>Whether you are an existing customer who needs to schedule a service call, talk to your sales rep or ask about our latest technologies, or you and your company are looking for more information on our services, our customer service department will handle your inquiry and get you to the person who can get you the information you are looking for.
+        </p>
+        <p>
+            You may contact us by phone or by submitting the contact form below. Your business is important to us and we pledge to respond to your inquiry within 24 hours.
+        </p>
+    </section>
+
+        
+    <div id="content" class="contents">
+<h2>Place Your Reservation </h2>
+<form id="suForm" class="form-horizontal" novalidate name="signUpForm">
+    <div class="form-group">
+        <label for="firstnameid" class="col-sm-2 control-label">First Name</label>
+        <label class="col-sm-8">
+            <input type="text"
+                   class="form-control"
+                   ng-model="firstname"
+                   id="firstnameid"
+                   name="firstname"
+                   placeholder="Please enter your first name"
+                   required
+                   data-ng-minlength="2"
+                   data-ng-maxlength="10"/>
+        </label>
+        <div class="error" ng-messages="signUpForm.firstname.$error" ng-if="signUpForm.firstname.$dirty">
+            <p ng-message="required">First name is Required!</p>
+            <p ng-message="minlength">Min length is 2!</p>
+            <p ng-message="maxlength">Max length is 10!</p>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="lastname" class="col-sm-2 control-label">Last Name</label>
+        <div class="col-sm-5">
+            <input type="text"
+                   class="form-control"
+                   ng-model="lastname"
+                   id="lastname"
+                   name="lastname"
+                   placeholder="Please enter your last name"
+                   required
+                   data-ng-minlength="2"
+                   data-ng-maxlength="10"/>
+        </div>
+        <div class="error" ng-messages="signUpForm.lastname.$error" ng-if="signUpForm.lastname.$dirty">
+            <p ng-message="required">Last name is Required!</p>
+            <p ng-message="minlength">min length is 2!</p>
+            <p ng-message="maxlength">max length is 10!</p>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
+        <div class="col-sm-8">
+            <input type="email" class="form-control" ng-model="inputEmail3" name="inputEmail3" id="inputEmail3" placeholder="Email" required>
+        </div>
+        <div class="error" ng-messages="signUpForm.inputEmail3.$error"   ng-if="signUpForm.inputEmail3.$dirty">
+            <p ng-message="required">email is Required!</p>
+            <p ng-message="email">Need to be in proper format</p>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="phone" class="col-sm-2 control-label">Contact Number</label>
+        <div class="col-sm-8">
+            <input type="text" class="form-control" ng-model="phone" name="phone" id="phone" placeholder="Please enter your contact number" required>
+        </div>
+        <div class="error" ng-messages="signUpForm.phone.$error" ng-if="signUpForm.phone.$dirty">
+            <p ng-message="required">Phone number is Required!</p>
+        </div>
+    </div>
+
+    
+    
+
+    <div class="form-group">
+        <label class="col-sm-2 control-label">Description</label>
+        <div class="col-sm-8">
+        <textarea class="form-control" rows="3" placeholder="Please mention date and time"></textarea>
+
+        </div>
+    </div>
+    <button class="btn btn-default" ng-click="ContactController()">Submit</button>
+            <button type="reset" class="btn btn-default">Start Over</button>
+</form>
+</article>
+</div>
